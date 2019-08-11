@@ -1,6 +1,5 @@
-#!/usr/bin/env ruby
+#!/usr/local/bin ruby
 
 require_relative '../lib/bike_itours'
 
 BikeItours::CLI.new.call
-
