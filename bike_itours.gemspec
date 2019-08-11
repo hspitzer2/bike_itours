@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["'hspitzer2@gmail.com'"]
 
   spec.summary       = %q{helpful guide to Italian bike tours, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
+  spec.description   = %q{Write a longer description or delete this line.}
   spec.homepage      = "https://www.backroads.com/award-winning-tours/biking/italy."
   spec.license       = "MIT"
 
@@ -38,5 +38,6 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 2.0"
   spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "pry"
 
 end
