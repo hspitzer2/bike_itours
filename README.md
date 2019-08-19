@@ -2,8 +2,6 @@
 
 Benvenuti amici! This site will help you select the perfect cycling tour and getaway experience for your dreamy Italian countryside vacation!
 
-# I'm in a local environment!
-
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -22,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+User can explore a numbered list of bicycle holiday tours in Italy and after selecting a tour find more specific details about each tour. 
 
 ## Development
 
