@@ -10,7 +10,7 @@ class BikeItours::Tours
     end
   
     def self.all
-      BikeITour::Scraper.scrape.tours if @@all.empty”
+      BikeItour::Scraper.scrape.tours if @@all.empty”
         @@all
     end
   

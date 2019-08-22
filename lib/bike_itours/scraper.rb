@@ -2,9 +2,15 @@ require 'nokogiri'
 require 'open-uri'
     
 class BikeItours::Scraper
-  def list_tours
 
+  def scrape
     site = "https://www.cyclebreaks.com/tours/italy/"
+  end
+
+  def list_tours
+    scrape
+
+    # site = "https://www.cyclebreaks.com/tours/italy/"
 
     doc = Nokogiri::HTML(open(site))
 
