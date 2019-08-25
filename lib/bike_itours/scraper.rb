@@ -21,7 +21,7 @@ class BikeItours::Scraper
     puts list_names
   end
 
-  def get_details(tour)
+  def get_details(tours)
     scrape
     # site = "https://www.cyclebreaks.com/tours/italy/"
 
@@ -29,7 +29,7 @@ class BikeItours::Scraper
 
     links = doc.css("a.cta-box-btn").map{|link| link.attr("href")}
 
-    scrape_detail_link = Nokogiri::HTML(open(links[tour-1]))
+    scrape_detail_link = Nokogiri::HTML(open(links[tours-1]))
 
     highlights = scrape_detail_link.css("div.content-tour p").text
 
