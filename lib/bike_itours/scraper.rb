@@ -12,7 +12,7 @@ class BikeItours::Scraper
 
     # site = "https://www.cyclebreaks.com/tours/italy/"
 
-    doc = Nokogiri::HTML(open(site))
+    doc = Nokogiri::HTML(open(scrape))
 
     names = doc.css(".summary-item-h h2").map(&:text)
     list_names = names.map.with_index(1) do |name, index|
@@ -22,10 +22,10 @@ class BikeItours::Scraper
   end
 
   def get_details(tour)
+    scrape
+    # site = "https://www.cyclebreaks.com/tours/italy/"
 
-    site = "https://www.cyclebreaks.com/tours/italy/"
-
-    doc = Nokogiri::HTML(open(site))
+    doc = Nokogiri::HTML(open(scrape))
 
     links = doc.css("a.cta-box-btn").map{|link| link.attr("href")}
 
