@@ -3,16 +3,16 @@ require 'open-uri'
     
 class BikeItours::Scraper
 
-  def scrape
-    site = "https://www.cyclebreaks.com/tours/italy/"
-  end
+  # def scrape
+  #   site = "https://www.cyclebreaks.com/tours/italy/"
+  # end
 
   def list_tours
-    scrape
+    # scrape
 
-    # site = "https://www.cyclebreaks.com/tours/italy/"
+    site = "https://www.cyclebreaks.com/tours/italy/"
 
-    doc = Nokogiri::HTML(open(scrape))
+    doc = Nokogiri::HTML(open(site))
 
     names = doc.css(".summary-item-h h2").map(&:text)
     list_names = names.map.with_index(1) do |name, index|
@@ -22,10 +22,10 @@ class BikeItours::Scraper
   end
 
   def get_details(tours)
-    scrape
-    # site = "https://www.cyclebreaks.com/tours/italy/"
+    # list_tours
+    site = "https://www.cyclebreaks.com/tours/italy/"
 
-    doc = Nokogiri::HTML(open(scrape))
+    doc = Nokogiri::HTML(open(site))
 
     links = doc.css("a.cta-box-btn").map{|link| link.attr("href")}
 
@@ -33,6 +33,7 @@ class BikeItours::Scraper
 
     highlights = scrape_detail_link.css("div.content-tour p").text
 
+    # puts "You've selected #{input.to_i - 1}!" 
     puts highlights
   end
 end

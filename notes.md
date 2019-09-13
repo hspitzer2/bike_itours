@@ -4,4 +4,4 @@ think about what to call different classes
   how will user use this app
     welcome, tree of choises, send to selcted page, give more details
     return to list or exit program
-    
+problems to adjust: when user gives you a wrong number; 

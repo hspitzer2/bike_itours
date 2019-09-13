@@ -1,11 +1,12 @@
 class BikeItours::Tours
-    attr_accessor :tours, :highlights
+    attr_accessor :tours, :highlights, :name
   
     @@all = []
   
     def initialize
       @highlights = highlights
       @tours = tours
+      @name = name
       save
     end
   
@@ -22,4 +23,13 @@ class BikeItours::Tours
     def self.save
       @@all << self
       end
+
+      def self.tour_name
+        Tours.all.map(&:name)
+      end
+    
+      def self.tour_highlight
+        Tours.all.map(&:highlight)
+      end
+     
     end

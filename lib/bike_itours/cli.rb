@@ -38,8 +38,8 @@ class BikeItours::CLI
    end
 
    def menu
-    tours = BikeItours::Scraper
-    list_tours
+    tours = BikeItours::Scraper.new
+    tours.list_tours
    
     puts ""
     puts "Please select the number of the location you would like to explore. When you have seen enough, just type 'q' for quit."
@@ -48,14 +48,16 @@ class BikeItours::CLI
     bike_icons
     if input.to_i > 0
       puts ""
+      
       puts "////////////Here we go//////////////////"
       
       puts ""
-      tour = get_details(input.to_i - 1)
+      tours.get_details(input.to_i - 1)
       puts ""
-      puts "//////////Want to see more?//////////////"
+      puts "//////////Exciting huh? But there's more!//////////////"
       new_bike
-      puts "Select another tour number or type 'q' if you are ready to to hit the road!"
+      puts "Would like the learn about another tour?" 
+      puts "Select the tour number or type 'q' if you are all ready to to hit the road!"
       puts ""
       menu
     elsif input == "q"
