@@ -19,6 +19,7 @@ class BikeItours::Scraper
       "#{index}. #{name}"
     end
     puts list_names
+
   end
 
   def get_details(tours)
@@ -33,7 +34,12 @@ class BikeItours::Scraper
 
     highlights = scrape_detail_link.css("div.content-tour p").text
 
+    # item_name = highlights.each.with_index(1) do |name, index|
+    #   "#{index}. #{name}"
+   
     # puts "You've selected #{input.to_i - 1}!" 
     puts highlights
+    # puts item_name
+    # end
   end
 end

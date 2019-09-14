@@ -5,3 +5,4 @@ think about what to call different classes
     welcome, tree of choises, send to selcted page, give more details
     return to list or exit program
 problems to adjust: when user gives you a wrong number; 
+I would like to add the name of the tour selected before the informaiton provided in get_details
