@@ -3,12 +3,7 @@ require 'open-uri'
     
 class BikeItours::Scraper
 
-  # def scrape
-  #   site = "https://www.cyclebreaks.com/tours/italy/"
-  # end
-
   def list_tours
-    # scrape
 
     site = "https://www.cyclebreaks.com/tours/italy/"
 
@@ -34,12 +29,7 @@ class BikeItours::Scraper
 
     highlights = scrape_detail_link.css("div.content-tour p").text
 
-    # item_name = highlights.each.with_index(1) do |name, index|
-    #   "#{index}. #{name}"
-   
-    # puts "You've selected #{input.to_i - 1}!" 
     puts highlights
-    # puts item_name
-    # end
+
   end
 end
