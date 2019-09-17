@@ -46,17 +46,19 @@ class BikeItours::CLI
     input = gets.strip
 
     bike_icons
-    if input.to_i > 0
+    if input.to_i > 0 
       puts ""
       
-      puts "////////////Here we go, you selected tour ##{input} //////////////////"
+      puts "//////////// Here we go, you selected tour ##{input} //////////////////"
       
       puts ""
+    
       tours.get_details(input.to_i - 1)
       puts ""
       puts "////////// That's exciting, but there's more! //////////////"
       new_bike
       puts "Would like to learn about another tour?" 
+      puts ""
       puts "Select the tour number or type 'q' if you are ready to to hit the road!"
       puts ""
       menu

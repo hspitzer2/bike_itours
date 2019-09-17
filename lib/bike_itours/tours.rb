@@ -15,11 +15,6 @@ class BikeItours::Tours
         @@all
     end
   
-    # def tours
-    #   scape(self) if@tours.empty
-    #   @tours
-    # end
-  
     def self.save
       @@all << self
       end
